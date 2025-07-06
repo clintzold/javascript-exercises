@@ -5,21 +5,25 @@
 
 function add(number1, number2) {
     result = number1 + number2;
+    roundNumber();
     console.log(result)
 }
 
 function subtract(number1, number2) {
     result = number1 - number2;
+    roundNumber();
     console.log(result)
 }
 
 function multiply(number1, number2) {
     result = number1 * number2;
+    roundNumber();
     console.log(result)
 }
 
 function divide(number1, number2) {
     result = number1 / number2;
+    roundNumber();
     console.log(result)
 }
 
@@ -41,6 +45,10 @@ function calculate(op, number1, number2) {
 
 }
 
+function roundNumber() {
+    result = result.toFixed(5)
+}
+
 function resetVariables() {
 
 }
@@ -55,4 +63,4 @@ let num2;
 let operator;
 let result;
 
-calculate ('+', 20, 40);
+calculate ('+', 20.123456, 40);
