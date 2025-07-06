@@ -46,7 +46,11 @@ function calculate(op, number1, number2) {
 }
 
 function roundNumber() {
-    result = result.toFixed(5)
+    
+    if (!Number.isSafeInteger(result)) {
+        result = result.toFixed(2)
+    }
+    
 }
 
 function resetVariables() {
@@ -63,4 +67,4 @@ let num2;
 let operator;
 let result;
 
-calculate ('+', 20.123456, 40);
+calculate ('+', 20, 40);
