@@ -45,6 +45,7 @@ function calculate(op, number1, number2) {
 
 }
 
+//Prevents excessively long decimal numbers
 function roundNumber() {
     
     if (!Number.isSafeInteger(result)) {
